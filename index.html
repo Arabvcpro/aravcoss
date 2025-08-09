@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArabVC - The Developer OS</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom Theme Configuration -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#1d4ed8',
+                        secondary: '#3b82f6',
+                        dark: '#111827',
+                        card: '#1f2937',
+                        text: '#d1d5db',
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+    </style>
+</head>
+<body class="bg-dark text-text font-sans min-h-screen flex flex-col justify-center items-center p-4">
+
+    <!-- Header Section -->
+    <header class="w-full max-w-5xl mb-12">
+        <nav class="flex justify-between items-center py-4">
+            <div class="text-2xl font-bold text-white">ArabVC</div>
+            <div class="space-x-4">
+                <a href="#video" class="text-text hover:text-white transition-colors duration-300">Features</a>
+                <a href="#download" class="text-text hover:text-white transition-colors duration-300">Download</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <main class="w-full max-w-5xl text-center mb-16">
+        <h1 class="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-4 animate-fade-in">
+            ArabVC: Your Developer Environment, <span class="text-primary">Optimized.</span>
+        </h1>
+        <p class="text-lg md:text-xl text-gray-400 mb-8 animate-fade-in-delay-1">
+            A lightweight and powerful OS built from the ground up for modern developers.
+        </p>
+        <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-6">
+            <!-- Download Button -->
+            <a href="#download" class="bg-primary text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-secondary transition-transform duration-300 transform hover:scale-105 animate-fade-in-delay-2">
+                Download Now
+            </a>
+        </div>
+    </main>
+
+    <!-- Download Section -->
+    <section id="download" class="w-full max-w-5xl mb-16 px-4">
+        <h2 class="text-3xl font-bold text-center text-white mb-8">Get Started with ArabVC</h2>
+        <div class="flex flex-col md:flex-row justify-center items-center space-y-6 md:space-y-0 md:space-x-8">
+            <!-- VirtualBox Link -->
+            <div class="bg-card p-8 rounded-3xl shadow-lg flex-1 text-center transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                <h3 class="text-2xl font-bold text-white mb-4">Step 1: Install VirtualBox</h3>
+                <p class="text-gray-400 mb-6">ArabVC runs on VirtualBox. Download and install it first.</p>
+                <a href="https://www.virtualbox.org/" target="_blank" class="bg-secondary text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-primary transition-colors duration-300">
+                    Download VirtualBox
+                </a>
+            </div>
+            <!-- ArabVC .ovf Link -->
+            <div class="bg-card p-8 rounded-3xl shadow-lg flex-1 text-center transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+                <h3 class="text-2xl font-bold text-white mb-4">Step 2: Download ArabVC</h3>
+                <p class="text-gray-400 mb-6">Get the ArabVC virtual appliance file (.ovf) and import it into VirtualBox. Password:arabvc</p>
+                <!-- REPLACE 'path/to/your/arabvc.ovf' WITH THE ACTUAL FILE PATH -->
+                <a href="arabvc.ovf" download class="bg-primary text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-secondary transition-colors duration-300">
+                    Download ArabVC .ovf
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="w-full max-w-5xl text-center py-8 border-t border-gray-700 mt-auto">
+        <p class="text-gray-500">
+            &copy; 2025 ArabVC. All rights reserved.
+        </p>
+    </footer>
+
+    <!-- Simple fade-in animations -->
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in { animation: fadeIn 1s ease-out; }
+        .animate-fade-in-delay-1 { animation: fadeIn 1s ease-out 0.3s forwards; opacity: 0; }
+        .animate-fade-in-delay-2 { animation: fadeIn 1s ease-out 0.6s forwards; opacity: 0; }
+        .animate-fade-in-delay-3 { animation: fadeIn 1s ease-out 0.9s forwards; opacity: 0; }
+    </style>
+
+</body>
+</html>
